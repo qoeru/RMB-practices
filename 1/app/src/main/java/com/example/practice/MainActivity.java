@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception exception) {
             Log.e(TAG, "Получено исключение", exception);
         }
-
     }
 
     @Override
@@ -60,6 +59,13 @@ public class MainActivity extends AppCompatActivity {
         Log.wtf(TAG, "What a terrible failure!");
         sendToast();
     }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        sendToast();
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
